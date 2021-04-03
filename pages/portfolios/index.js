@@ -1,12 +1,17 @@
 import React from "react";
+import Link from "next/link";
 import axios from "axios";
-import Layout from "../components/layouts/Layout";
+import Layout from "../../components/layouts/Layout";
 
 const Portfolios = ({ posts }) => {
-  console.log(posts);
-
   const renderPosts = () => {
-    return posts.map((post) => <li key={post.id}>{post.title}</li>);
+    return posts.map((post) => (
+      <li key={post.id}>
+        <Link href={`/portfolios/${post.id}`}>
+          <a>{post.title}</a>
+        </Link>
+      </li>
+    ));
   };
   return (
     <Layout>
@@ -24,7 +29,7 @@ Portfolios.getInitialProps = async () => {
     );
     posts = response.data;
   } catch (error) {
-    console.log(error.message);
+    throw new Error(error.message);
   }
 
   return { posts: posts.slice(0, 10) };
