@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "../components/shared/Header";
 
-const Home = () => {
+const Blogs = () => {
   return (
     <>
       <Header />
@@ -10,4 +10,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Blogs;
