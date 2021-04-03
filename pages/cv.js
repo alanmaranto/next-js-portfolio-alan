@@ -1,12 +1,11 @@
 import React from "react";
-import Header from "../components/shared/Header";
+import Layout from "../components/layouts/Layout";
 
 const CV = () => {
   return (
-    <>
-      <Header />
+    <Layout>
       <div>Hola</div>
-    </>
+    </Layout>
   );
 };
 
