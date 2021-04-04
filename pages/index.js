@@ -1,10 +1,13 @@
 import React from "react";
 import Layout from "../components/layouts/Layout";
+import { Container, Button } from "reactstrap";
 
 const Home = () => {
   return (
     <Layout>
-      <div>Hola</div>
+      <Container>
+        <Button color="danger">Danger</Button>
+      </Container>
     </Layout>
   );
 };
