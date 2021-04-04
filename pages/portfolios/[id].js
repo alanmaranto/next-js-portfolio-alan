@@ -1,6 +1,5 @@
 import React from "react";
 import axios from "axios";
-import { useRouter } from "next/router";
 import Layout from "../../components/layouts/Layout";
 
 const Portfolio = ({ portfolio }) => {
