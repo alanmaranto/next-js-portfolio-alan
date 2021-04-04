@@ -1,7 +1,14 @@
 @import "./shared/fonts";
 
+// Components
+@import "./components/header";
+
 // Pages
 @import "./index";
+
+.absolute {
+  position: absolute;
+}
 
 html,
 body {
