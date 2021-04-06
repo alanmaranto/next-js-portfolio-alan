@@ -1,7 +1,7 @@
 import React from "react";
 import axios from "axios";
-import Layout from "../../components/layouts/Layout";
-import BasePage from "../../components/BasePage";
+import Layout from "@/components/layouts/Layout";
+import BasePage from "@/components/BasePage";
 
 const Portfolio = ({ portfolio }) => {
   return (

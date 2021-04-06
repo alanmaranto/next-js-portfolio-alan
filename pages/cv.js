@@ -1,6 +1,6 @@
 import React from "react";
-import Layout from "../components/layouts/Layout";
-import BasePage from "../components/BasePage";
+import Layout from "@/components/layouts/Layout";
+import BasePage from "@/components/BasePage";
 
 const CV = () => {
   return (

@@ -1,5 +1,5 @@
 import React from "react";
-import BaseLayout from "../components/layouts/Layout";
+import BaseLayout from "@/components/layouts/Layout";
 import { Container, Row, Col } from "reactstrap";
 import ReactTyped from "react-typed";
 
