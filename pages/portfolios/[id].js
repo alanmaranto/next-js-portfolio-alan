@@ -26,7 +26,6 @@ Portfolio.getInitialProps = async ({ query }) => {
   } catch (error) {
     throw new Error(error.message);
   }
-  debugger;
   return { portfolio: post };
 };
 
