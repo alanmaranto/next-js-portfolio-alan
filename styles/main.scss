@@ -2,6 +2,7 @@
 
 // Components
 @import "./components/header";
+@import "./components/basepage.scss";
 
 // Pages
 @import "./index";
@@ -16,4 +17,3 @@ body {
   height: 100%;
   font-family: "Montserrat", "Helvetica";
 }
-

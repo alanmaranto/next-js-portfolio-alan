@@ -1,10 +1,13 @@
 import React from "react";
 import Layout from "../components/layouts/Layout";
+import BasePage from "../components/BasePage";
 
 const CV = () => {
   return (
     <Layout>
-      <div>Hola</div>
+      <BasePage>
+        <div>CV</div>
+      </BasePage>
     </Layout>
   );
 };
