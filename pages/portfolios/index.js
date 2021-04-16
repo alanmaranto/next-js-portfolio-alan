@@ -1,20 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Link from "next/link";
 import Layout from "@/components/layouts/Layout";
 import BasePage from "@/components/BasePage";
+import { useGetPosts } from "@/hooks/posts/index.js";
 
 const Portfolios = () => {
-  const [posts, setPosts] = useState([]);
-
-  useEffect(() => {
-    getPosts();
-  }, []);
-
-  const getPosts = async () => {
-    const response = await fetch("/api/v1/posts");
-    const data = await response.json();
-    setPosts(data);
-  };
+  const { posts, error } = useGetPosts();
 
   const renderPosts = () => {
     return posts.map((post) => (
@@ -28,8 +19,9 @@ const Portfolios = () => {
   return (
     <Layout>
       <BasePage>
-        <div>Hola</div>
-        <ul>{renderPosts()}</ul>
+        <h1>Hola</h1>
+        {posts && <ul>{renderPosts()}</ul>}
+        {error && <div className="alert alert-danger">{error.message}</div>}
       </BasePage>
     </Layout>
   );

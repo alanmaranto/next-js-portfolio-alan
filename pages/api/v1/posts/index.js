@@ -8,6 +8,6 @@ export default async (req, res) => {
     const posts = response.data;
     res.status(200).json(posts.slice(0, 10));
   } catch (error) {
-    res.status(error.status || 400).end("Api Error");
+    res.status(error.status || 400).json({ message: "Api error" });
   }
 };
