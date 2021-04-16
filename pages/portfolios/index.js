@@ -5,7 +5,7 @@ import BasePage from "@/components/BasePage";
 import { useGetPosts } from "@/hooks/posts/index.js";
 
 const Portfolios = () => {
-  const { posts, error } = useGetPosts();
+  const { posts, error, loading } = useGetPosts();
 
   const renderPosts = () => {
     return posts.map((post) => (
@@ -20,6 +20,7 @@ const Portfolios = () => {
     <Layout>
       <BasePage>
         <h1>Hola</h1>
+        {loading && <p>Loading...</p>}
         {posts && <ul>{renderPosts()}</ul>}
         {error && <div className="alert alert-danger">{error.message}</div>}
       </BasePage>
