@@ -1,7 +1,13 @@
-import { data } from "@/data";
+import axios from "axios";
 
-function handlePosts(req, res) {
-  res.status(200).json(data);
-}
-
-export default handlePosts;
+export default async (req, res) => {
+  try {
+    const response = await axios.get(
+      "https://jsonplaceholder.typicode.com/posts"
+    );
+    const posts = response.data;
+    res.status(200).json(posts.slice(0, 10));
+  } catch (error) {
+    res.status(error.status || 400).end("Api Error");
+  }
+};
