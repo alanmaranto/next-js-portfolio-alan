@@ -2,12 +2,12 @@ import React from "react";
 import Link from "next/link";
 import Layout from "@/components/layouts/Layout";
 import BasePage from "@/components/BasePage";
-import { useGetPosts } from "@/hooks/posts/index.js";
+import { useGetData } from "@/hooks/posts/index.js";
 
 const Portfolios = () => {
-  const { posts, error, loading } = useGetPosts();
+  const { data, error, loading } = useGetData("/api/v1/posts");
 
-  const renderPosts = () => {
+  const renderPosts = (posts) => {
     return posts.map((post) => (
       <li key={post.id}>
         <Link href={`/portfolios/${post.id}`}>
@@ -21,7 +21,7 @@ const Portfolios = () => {
       <BasePage>
         <h1>Hola</h1>
         {loading && <p>Loading...</p>}
-        {posts && <ul>{renderPosts()}</ul>}
+        {data && <ul>{renderPosts(data)}</ul>}
         {error && <div className="alert alert-danger">{error.message}</div>}
       </BasePage>
     </Layout>
