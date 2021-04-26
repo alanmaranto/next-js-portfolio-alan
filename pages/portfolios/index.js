@@ -2,10 +2,10 @@ import React from "react";
 import Link from "next/link";
 import Layout from "@/components/layouts/Layout";
 import BasePage from "@/components/BasePage";
-import { useGetData } from "@/hooks/posts/index.js";
+import { useGetPosts } from '@/hooks/posts'
 
 const Portfolios = () => {
-  const { data, error, loading } = useGetData("/api/v1/posts");
+  const { data, error, loading } = useGetPosts()
 
   const renderPosts = (posts) => {
     return posts.map((post) => (

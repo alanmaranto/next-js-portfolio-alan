@@ -1,4 +1,4 @@
-import React from "react";
+/* import React from "react";
 import Layout from "@/components/layouts/Layout";
 import BasePage from "@/components/BasePage";
 import { useGetData } from "@/hooks/posts/index.js";
@@ -28,3 +28,4 @@ const Portfolio = () => {
 };
 
 export default Portfolio;
+ */
